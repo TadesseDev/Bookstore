@@ -13,8 +13,8 @@ export default function Navbar() {
   return (
     <nav style={navStyle}>
       <ul style={ulStyle}>
-        <li><NavLink to="/">Book</NavLink></li>
-        <li><NavLink to="/categories">Category</NavLink></li>
+        <li key="book"><NavLink to="/">Book</NavLink></li>
+        <li key="category"><NavLink to="/categories">Category</NavLink></li>
       </ul>
     </nav>
   )
