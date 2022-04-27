@@ -1,6 +1,6 @@
-# Math magicians
+# Book Store
 
-> This is Math magicians project.
+> This isBook Store project.
 
 ## Built With
 
