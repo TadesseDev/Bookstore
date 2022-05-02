@@ -1,8 +1,9 @@
-const ADD_BOOK = 'ADD_BOOK';
-const REMOVE_BOOK = "REMOVE_BOOK";
+const ADD_BOOK = 'NEW_BOOK_ADD';
+const REMOVE_BOOK = "BOOK_REMOVED";
+const initialState = [];
 export const addBook = (title, author) => ({ type: ADD_BOOK, payload: { title, author } });
 export const removeBook = (id) => ({ type: REMOVE_BOOK, payload: id });
-export default (state = [], action) => {
+export default (state = initialState, action) => {
   switch (action.type) {
     case ADD_BOOK:
       return [
