@@ -1,4 +1,4 @@
-import categoryReducer, { checkStatus } from '../redux/categories/categories'
+import categoryReducer, { checkStatus } from '../redux/categories/categories';
 
 describe('test categories reducers for pure state', () => {
   test('test category reducer for purity', () => {

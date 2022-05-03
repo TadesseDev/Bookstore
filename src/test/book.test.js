@@ -1,4 +1,5 @@
 import bookReducer, { addBook, removeBook } from '../redux/books/books';
+
 describe('test book reducer for pure state', () => {
   test('test book reducer for purity', () => {
     const initialState = [];
@@ -14,7 +15,6 @@ describe('test book reducer for pure state', () => {
       .toEqual(StateAfterSecondAdd);
 
     expect(StateAfterFirstAdd).toEqual([{ title: 'Tadesse', author: 'Alemayehu' }]);
-
 
     expect(bookReducer(StateAfterSecondAdd, removeBook(0)))
       .toEqual([{ title: 'Tadesse1', author: 'Alemayehu1' }]);
