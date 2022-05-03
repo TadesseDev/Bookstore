@@ -5,7 +5,6 @@ import { removeBook } from '../../redux/books/books';
 export default function book({ title, author, id }) {
   const dispatch = useDispatch();
   const handelRemoveBook = (event) => {
-    console.log(event.target.getAttribute('id'));
     dispatch(removeBook(event.target.getAttribute('id')));
   };
   return (

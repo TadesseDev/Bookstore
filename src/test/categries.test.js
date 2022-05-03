@@ -7,7 +7,7 @@ describe('test categories reducers for pure state', () => {
     expect(categoryReducer(state, checkStatus()))
       .toEqual('Under construction');
 
-    //Assert state is not getting updated inside reducer
+    // Assert state is not getting updated inside reducer
     expect(state).toEqual([]);
   });
 });
