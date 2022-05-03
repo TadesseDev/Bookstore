@@ -10,9 +10,11 @@ describe('test book reducer for pure state', () => {
     const firstState = bookReducer(initialState, addBook(...firstPayload));
     expect(firstState.length).toBe(1);
 
+    //pass first state as initial state and ge the second state
     const secondState = bookReducer(firstState, addBook(...secondPayload));
     expect(secondState.length).toEqual(2);
 
+    //make sure previous state is not updated once pass as a state for a reducer
     expect(initialState).toEqual([]);
     expect(firstState.length).toEqual(1);
   });
