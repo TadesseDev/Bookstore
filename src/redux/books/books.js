@@ -1,19 +1,23 @@
+import { v4 as uuidv4 } from 'uuid';
+
 const ADD_BOOK = 'NEW_BOOK_ADD';
 const REMOVE_BOOK = 'BOOK_REMOVED';
 const initialState = [
   {
-    id: 1,
+    id: uuidv4(),
     title: 'The Hunger Game',
     author: 'Suzanne Collins',
   },
   {
-    id: 2,
+    id: uuidv4(),
     title: 'The Hunger Game',
     author: 'Suzanne Collins',
   },
 ];
 
-export const addBook = (title, author) => ({ type: ADD_BOOK, payload: { title, author } });
+export const addBook = (title, author) => (
+  { type: ADD_BOOK, payload: { title, author, id: uuidv4() } }
+);
 export const removeBook = (id) => ({ type: REMOVE_BOOK, payload: id });
 
 export default (state = initialState, action) => {
