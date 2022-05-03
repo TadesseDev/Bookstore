@@ -8,7 +8,12 @@ export default function Books() {
   return (
     <div>
       {books.map((book) => (
-        <Book key={book.id} title={book.title} author={book.author} />
+        <Book
+          key={book.id}
+          title={book.title}
+          author={book.author}
+          id={book.id}
+        />
       ))}
       <AddNewBook />
     </div>
