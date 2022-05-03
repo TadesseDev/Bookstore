@@ -15,11 +15,14 @@ describe('test book reducer for pure state', () => {
     expect(secondState.length).toEqual(2);
 
     // assert remove action for purity
-    const removeState = bookReducer(secondState, removeBook(secondState[0].id));
-    expect(removeState.length).toEqual(1);
+    const removeState1 = bookReducer(secondState, removeBook(secondState[0].id));
+    expect(removeState1.length).toEqual(1);
+    const removeState2 = bookReducer(removeState1, removeBook(removeState1[0].id));
+    expect(removeState2.length).toEqual(0);
 
-    // make sure previous state is not updated once pass as a state for a reducer
+    // make all state passed as previous state are not changed
     expect(initialState).toEqual([]);
     expect(firstState.length).toEqual(1);
+    expect(secondState.length).toEqual(2);
   });
 });
