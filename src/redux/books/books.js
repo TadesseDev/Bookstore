@@ -13,7 +13,7 @@ export default (state = initialState, action) => {
         action.payload,
       ];
     case REMOVE_BOOK:
-      return state.filter((book, index) => index !== action.payload);
+      return state.filter((book, index) => index !== action.payload ? book : false);
     default:
       return state;
   }
