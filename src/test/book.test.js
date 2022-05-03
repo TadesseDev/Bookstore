@@ -1,5 +1,5 @@
 // import { v4 as uuidv4 } from 'uuid'
-import bookReducer, { addBook } from '../redux/books/books';
+import bookReducer, { addBook, removeBook } from '../redux/books/books';
 
 describe('test book reducer for pure state', () => {
   const initialState = [];
@@ -13,6 +13,10 @@ describe('test book reducer for pure state', () => {
     // pass first state as initial state and ge the second state
     const secondState = bookReducer(firstState, addBook(...secondPayload));
     expect(secondState.length).toEqual(2);
+
+    // assert remove action for purity
+    const removeState = bookReducer(secondState, removeBook(secondState[0].id));
+    expect(removeState.length).toEqual(1);
 
     // make sure previous state is not updated once pass as a state for a reducer
     expect(initialState).toEqual([]);
