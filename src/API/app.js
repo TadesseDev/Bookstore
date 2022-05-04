@@ -7,3 +7,12 @@ const getBookJson = (book) => JSON.stringify({
   "category": book.category
 });
 
+const getBooksAPI = async () => {
+  try {
+    const result = await fetch(baseUrl);
+    const data = await result.json();
+    return { status: true, payload: data };
+  } catch (error) {
+  }
+}
+
