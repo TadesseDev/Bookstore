@@ -30,3 +30,16 @@ const addBookAPI = async (book) => {
   }
 }
 
+const removeBook = async (id) => {
+  try {
+    const result = await fetch(baseUrl + id, {
+      method: 'DELETE',
+      mode: 'no-cors',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ item_id: id })
+    });
+    return { status: true, payload: result };
+  } catch (error) {
+    return { status: false, payload: error };
+  }
+}
