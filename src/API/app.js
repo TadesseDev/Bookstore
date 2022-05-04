@@ -16,3 +16,17 @@ const getBooksAPI = async () => {
   }
 }
 
+const addBookAPI = async (book) => {
+  try {
+    const result = await fetch(baseUrl, {
+      method: 'POST',
+      mode: 'no-cors',
+      headers: { 'Content-Type': 'application/json' },
+      body: getBookJson(book)
+    })
+    return { status: true, payload: result };
+  } catch (error) {
+    return { status: false, payload: error };
+  }
+}
+
