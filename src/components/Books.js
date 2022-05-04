@@ -8,7 +8,6 @@ export default function Books() {
   const dispatch = useDispatch();
   const books = useSelector((store) => store.books);
   useEffect(() => {
-    // console.log('data');
     dispatch(getBooksFromServer());
   }, []);
   return (
