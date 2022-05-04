@@ -1,45 +1,47 @@
 const appId = 'ZijPZapn481OKArMG39M';
-const baseUrl = 'https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/ZijPZapn481OKArMG39M/books/';
-const getBookJson = (book) => JSON.stringify({
-  "item_id": book.id,
-  "title": book.title,
-  "author": book.author,
-  "category": book.category
+const baseUrl = `https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/${appId}/books`;
+const bookString = (book) => JSON.stringify({
+  item_id: book.id,
+  title: book.title,
+  author: book.author,
+  category: book.category,
 });
 
-const getBooksAPI = async () => {
+export const getBooksAPI = async () => {
   try {
     const result = await fetch(baseUrl);
     const data = await result.json();
-    return { status: true, payload: data };
+    return data;
   } catch (error) {
+    return error;
   }
-}
+};
 
-const addBookAPI = async (book) => {
+export const addBookAPI = async (book) => {
   try {
-    const result = await fetch(baseUrl, {
+    await fetch(baseUrl, {
       method: 'POST',
-      mode: 'no-cors',
-      headers: { 'Content-Type': 'application/json' },
-      body: getBookJson(book)
-    })
-    return { status: true, payload: result };
-  } catch (error) {
-    return { status: false, payload: error };
-  }
-}
-
-const removeBook = async (id) => {
-  try {
-    const result = await fetch(baseUrl + id, {
-      method: 'DELETE',
-      mode: 'no-cors',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ item_id: id })
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: bookString(book),
     });
-    return { status: true, payload: result };
+    return true;
   } catch (error) {
-    return { status: false, payload: error };
+    return false;
   }
-}
+};
+
+export const removeBookAPI = async (id) => {
+  const url = `${baseUrl}/${id}`;
+  try {
+    const result = await fetch(url, {
+      method: 'DELETE',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ item_id: id }),
+    });
+    return result;
+  } catch (error) {
+    return error;
+  }
+};
