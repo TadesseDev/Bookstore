@@ -1,0 +1,32 @@
+#book{
+  display: flex;
+  align-items: center;
+  margin: 2vw 5vw;
+  padding: 2vw 3vw;
+  background-color: white;
+  justify-content: space-between;
+}
+#book ul{
+  display: flex;
+  gap: 2vw;
+  font-size: small;
+}
+
+h1,h2,h3,h4,p{
+  margin: 0;
+}
+.category{
+  font-size: small;
+}
+
+#book a,.author{
+  color: var(--blue-blur)
+}
+
+.remove-book{
+background-color: var(--blue);
+border: none;
+outline: none;
+color: white;
+padding:1vw 2vw;
+}
