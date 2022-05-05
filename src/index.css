@@ -6,14 +6,18 @@ html,
 body {
   margin: 0;
   padding: 0;
-  /* background-color: var(--blue); */
+  background-color: #fafafa;
 font-family: 'Lexend Deca', sans-serif;
 font-weight: 300;
 }
 
 a{
   text-decoration: none;
-  color: black
+  color: rgb(120, 117, 117)
+}
+
+a.active{
+  color: black;
 }
 
 .icon{

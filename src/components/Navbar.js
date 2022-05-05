@@ -7,7 +7,7 @@ export default function Navbar() {
   return (
     <nav id="navbar">
       <ul className="menuContainer">
-        <span className="logo">Bookstore CMS</span>
+        <h1 className="logo">Bookstore CMS</h1>
         <li><NavLink to="/">Book</NavLink></li>
         <li><NavLink to="/categories">Category</NavLink></li>
       </ul>
