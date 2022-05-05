@@ -31,3 +31,8 @@ font-weight: 400;
 .icon{
   margin: auto;
 }
+
+ul{
+  list-style: none;
+  padding: 0
+}
