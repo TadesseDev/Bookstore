@@ -11,7 +11,7 @@ export default function Navbar() {
         <li><NavLink to="/">Book</NavLink></li>
         <li><NavLink to="/categories">Category</NavLink></li>
       </ul>
-      <span id="profilePic"><FaUserAlt /></span>
+      <span id="profile-pic"><FaUserAlt className="icon" /></span>
     </nav>
   );
 }

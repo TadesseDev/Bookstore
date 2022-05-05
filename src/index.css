@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100;200;400&display=swap');
 :root{
   --blue: #0290ff;
 }
@@ -6,4 +7,15 @@ body {
   margin: 0;
   padding: 0;
   /* background-color: var(--blue); */
+font-family: 'Lexend Deca', sans-serif;
+font-weight: 300;
+}
+
+a{
+  text-decoration: none;
+  color: black
+}
+
+.icon{
+  color: var(--blue)
 }
