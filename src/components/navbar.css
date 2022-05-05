@@ -1,0 +1,9 @@
+#navbar{
+  display: flex;
+  justify-content: center;
+}
+.menuContainer{
+display: flex;
+gap: 10px;
+list-style: none;
+}
