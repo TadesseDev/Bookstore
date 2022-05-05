@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100;200;400&display=swap');
 :root{
   --blue: #0290ff;
+  --blue-blur:#4386bf;
 }
 html,
 body {
@@ -21,5 +22,5 @@ a.active{
 }
 
 .icon{
-  color: var(--blue)
+  color: var(--blue);
 }
