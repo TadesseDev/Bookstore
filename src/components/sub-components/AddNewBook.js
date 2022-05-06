@@ -7,8 +7,8 @@ export default function AddNewBook() {
   const dispatch = useDispatch();
   const handleNewBookSubmit = (event) => {
     event.preventDefault();
-    const title = event.target.elements[0];
-    const author = event.target.elements[1];
+    const title = event.target.elements[1];
+    const author = event.target.elements[2];
     dispatch(addBook(title.value, author.value));
     title.value = '';
     author.value = '';
