@@ -1,6 +1,6 @@
 # Book Store
 
-> This isBook Store project.
+> This is Book Store project.
 
 ## Built With
 
@@ -11,7 +11,7 @@
 
 ## Live Demo
 
-[Coming soon]()
+[Go Live](https://tadesse-bookstore.netlify.app/) 😎
 
 ## Getting Started
 
