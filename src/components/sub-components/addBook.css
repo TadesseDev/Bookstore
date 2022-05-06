@@ -1,0 +1,33 @@
+#add-new-book fieldset{
+border: none;
+display: flex;
+min-height: 100%;
+gap: 2vw;
+margin: 2vw 5vw;
+color: var(--blur-silver);
+}
+legend{
+    font-weight: bolder;
+    margin: 1vw 0;
+}
+#add-new-book input{
+    border: none;
+    outline: none;
+    padding: 0.5vw;
+}
+input{
+    min-width: 25%;
+    min-width: 100px;
+}
+.book-title{
+    min-width: 45%;
+    flex-grow: 1;
+}
+#add-book-button{
+    padding: 0.5vw 3vw;
+    max-width: 200px;
+}
+hr{
+    margin: 5vw;
+    color: var(--blur-silver);
+}

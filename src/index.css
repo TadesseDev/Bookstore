@@ -2,6 +2,7 @@
 :root{
   --blue: #0290ff;
   --blue-blur:#4386bf;
+  --blur-silver: #888888;
 }
 html,
 body {
@@ -24,4 +25,11 @@ a.active{
 
 .icon{
   color: var(--blue);
+}
+
+button{
+background-color: var(--blue);
+border: none;
+outline: none;
+color: white;
 }
