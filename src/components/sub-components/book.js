@@ -23,10 +23,10 @@ export default function book({
         </ul>
       </div>
       <div id="completed">
-        <div className="percent-circle"></div>
+        <div className="percent-circle" />
         <div>
-        <h1>{Math.floor(Math.random() * 100) }</h1>
-        <small>completed</small>
+          <h1>{Math.floor(Math.random() * 100) }</h1>
+          <small>completed</small>
         </div>
       </div>
       <div>
