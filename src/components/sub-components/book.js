@@ -14,7 +14,7 @@ export default function book({
     <article id="book">
       <div>
         <p className="category">{category}</p>
-        <h2 className="title">{title}</h2>
+        <h3 className="title">{title}</h3>
         <small className="author">{author}</small>
         <ul>
           <li><a href="#temp">Comment</a></li>
@@ -22,14 +22,25 @@ export default function book({
           <li><a href="#temp">Edit</a></li>
         </ul>
       </div>
-      <button
-        className="remove-book"
-        type="submit"
-        id={id}
-        onClick={handelRemoveBook}
-      >
-        Remove this book
-      </button>
+      <div id="completed">
+        <div className="percent-circle"></div>
+        <div>
+        <h1>{Math.floor(Math.random() * 100) }</h1>
+        <small>completed</small>
+        </div>
+      </div>
+      <div>
+        <p className="curent-chapter">curent chapter</p>
+        <p className="chapter">chapter 17</p>
+        <button
+          className="remove-book"
+          type="submit"
+          id={id}
+          onClick={handelRemoveBook}
+        >
+          Remove this book
+        </button>
+      </div>
     </article>
   );
 }
