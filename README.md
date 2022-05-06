@@ -9,6 +9,9 @@
 - JavaScript
 - React
 
+## screen shot
+![Capture](https://user-images.githubusercontent.com/69077061/167191842-d6d2690c-ec22-4f3f-a500-31bfd9c3df8f.PNG)
+
 ## Live Demo
 
 [Go Live](https://tadesse-bookstore.netlify.app/) 😎
