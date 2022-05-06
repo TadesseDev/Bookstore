@@ -8,7 +8,8 @@ export default function book({
 }) {
   const dispatch = useDispatch();
   const handelRemoveBook = (event) => {
-    dispatch(removeBook(event.target.getAttribute('id')));
+    event.preventDefault();
+    dispatch(removeBook(event.target.getAttribute('data-id')));
   };
   return (
     <article id="book">
@@ -18,7 +19,7 @@ export default function book({
         <small className="author">{author}</small>
         <ul>
           <li><a href="#temp">Comment</a></li>
-          <li><a href="#temp">Remove</a></li>
+          <li><a href="#temp" data-id={id} onClick={handelRemoveBook}>Remove</a></li>
           <li><a href="#temp">Edit</a></li>
         </ul>
       </div>
@@ -35,7 +36,7 @@ export default function book({
         <button
           className="remove-book"
           type="submit"
-          id={id}
+          data-id={id}
           onClick={handelRemoveBook}
         >
           Remove this book
