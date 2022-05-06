@@ -18,6 +18,11 @@ h1,h2,h3,h4,p{
   font-size: small;
 }
 
+.content{
+  width: 45%;
+max-width: 45%;
+}
+
 #book a,.author{
   color: var(--blue-blur)
 }

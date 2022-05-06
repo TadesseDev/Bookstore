@@ -12,7 +12,7 @@ export default function book({
   };
   return (
     <article id="book">
-      <div>
+      <div className="content">
         <p className="category">{category}</p>
         <h3 className="title">{title}</h3>
         <small className="author">{author}</small>
@@ -25,7 +25,7 @@ export default function book({
       <div id="completed">
         <div className="percent-circle" />
         <div>
-          <h1>{Math.floor(Math.random() * 100) }</h1>
+          <h1>{Math.floor(Math.random() * 100)}</h1>
           <small>completed</small>
         </div>
       </div>
