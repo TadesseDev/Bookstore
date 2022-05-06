@@ -11,12 +11,13 @@ export default function Books() {
     dispatch(getBooksFromServer());
   }, []);
   return (
-    <div>
+    <div id="books-container">
       {books.map((book) => (
         <Book
           key={book.id}
           title={book.title}
           author={book.author}
+          category={book.category}
           id={book.id}
         />
       ))}

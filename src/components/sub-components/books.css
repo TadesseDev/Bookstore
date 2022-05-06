@@ -1,0 +1,72 @@
+#book {
+  display: flex;
+  margin: 2vw 5vw;
+  padding: 2vw 3vw;
+  background-color: white;
+  justify-content: space-between;
+}
+
+#book ul {
+  display: flex;
+  gap: 2vw;
+  font-size: small;
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+  margin: 0;
+}
+
+.category {
+  font-size: small;
+}
+
+.content {
+  width: 45%;
+  max-width: 45%;
+}
+
+#book a,
+.author {
+  color: var(--blue-blur);
+}
+
+#book a:hover {
+  font-weight: bolder;
+}
+
+.remove-book {
+  padding: 1vw 2vw;
+  box-shadow: 0 0 5px #0000007a;
+  border-radius: 3px;
+}
+
+.curent-chapter {
+  color: silver;
+  margin-bottom: 5px;
+}
+
+.chapter {
+  margin-bottom: 10px;
+}
+
+#completed {
+  align-self: center;
+  display: flex;
+  align-items: center;
+  gap: 1vw;
+}
+
+.percent-circle {
+  width: 4vw;
+  height: 4vw;
+  border-left: 3px solid silver;
+  border-top: 3px solid var(--blue);
+  border-right: 3px solid var(--blue);
+  border-bottom: 3px solid var(--blue);
+  border-radius: 50%;
+  transform: rotate(45deg);
+}

@@ -1,5 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100;200;400&display=swap');
+
+:root {
+  --blue: #0290ff;
+  --blue-blur: #4386bf;
+  --blur-silver: #888;
+}
+
 html,
 body {
   margin: 0;
   padding: 0;
+  background-color: #fafafa;
+  font-family: 'Lexend Deca', sans-serif;
+  font-weight: 300;
+}
+
+a {
+  text-decoration: none;
+  color: rgb(120, 117, 117);
+}
+
+a.active {
+  color: black;
+  font-weight: bold;
+}
+
+.icon {
+  color: var(--blue);
+}
+
+button {
+  background-color: var(--blue);
+  border: none;
+  outline: none;
+  color: white;
 }
